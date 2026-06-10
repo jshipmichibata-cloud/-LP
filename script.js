@@ -1,75 +1,75 @@
 // 診断項目・質問・診断タイプはここに集約し、後から編集しやすくしています。
 const categories = [
   {
-    id: "understanding",
-    name: "AI理解度",
-    description: "AIとは何か、生成AIとは何か、ChatGPT以外のAI活用まで理解できているか。",
+    id: "recruiting",
+    name: "採用AI活用度",
+    description: "求人票、スカウト文、候補者対応、面接準備など採用業務でAIを活用できているか。",
     questions: [
-      "社内で生成AIやChatGPTの基本的な仕組みを理解している人がいる",
-      "AIでできること・できないことをある程度理解している"
+      "求人票やスカウト文の作成にAIを活用している",
+      "候補者対応、面接質問作成、選考準備などにAIを活用している"
     ]
   },
   {
-    id: "usage",
-    name: "現場活用度",
-    description: "社員が日常業務でAIを実際に使えているか。",
+    id: "development",
+    name: "育成・オンボーディング力",
+    description: "社員教育、オンボーディング、研修資料作成、学習支援にAIを活用できているか。",
     questions: [
-      "社員が日常業務でAIを活用している",
-      "AIを使って資料作成、文章作成、情報整理などを行っている"
+      "新入社員や中途入社者向けのオンボーディング資料作成にAIを活用している",
+      "社員教育やリスキリングの教材・課題作成にAIを活用している"
     ]
   },
   {
-    id: "design",
-    name: "業務設計力",
-    description: "どの業務にAIを使うべきか整理できているか。",
+    id: "evaluation",
+    name: "評価・配置支援力",
+    description: "評価コメント、1on1、配置検討、スキル整理などにAIを安全に活用できているか。",
     questions: [
-      "AIを活用できる業務と、人が行うべき業務を整理できている",
-      "自社業務の中でAI化できそうな業務を洗い出せている"
+      "評価コメントや1on1記録の整理にAIを活用できている",
+      "人材配置やスキル把握のための情報整理にAIを活用できている"
     ]
   },
   {
-    id: "education",
-    name: "教育・定着力",
-    description: "社員にAIを教える仕組みや、継続的に使う体制があるか。",
+    id: "operations",
+    name: "労務・問い合わせ効率化",
+    description: "就業規則、社内制度、手続き、社員問い合わせ対応を効率化できているか。",
     questions: [
-      "社員向けにAIの使い方を学ぶ機会がある",
-      "AI活用が一部の人だけでなく、組織全体に広がる仕組みがある"
+      "社内制度や労務手続きに関する問い合わせ対応をAIで効率化できている",
+      "就業規則、規程、FAQなどの情報整理にAIを活用できている"
     ]
   },
   {
-    id: "advanced",
-    name: "発展・応用力",
-    description: "RAG、AIエージェント、自社専用AIなど応用活用に進める状態か。",
+    id: "retention",
+    name: "定着・エンゲージメント",
+    description: "離職予兆、社員の声、エンゲージメント施策の整理にAIを活用できているか。",
     questions: [
-      "RAG、AIエージェント、自社専用AIなどの活用に興味がある",
-      "単なるChatGPT利用ではなく、業務システムや社内データとの連携も検討している"
+      "社員アンケートや面談内容をもとに、組織課題を整理できている",
+      "離職防止やエンゲージメント向上の施策検討にAIを活用できている"
     ]
   },
   {
-    id: "security",
-    name: "AIセキュリティ管理",
-    description: "入力禁止情報、社内ルール、利用ポリシーなどが整っているか。",
+    id: "hrdata",
+    name: "HRデータ活用力",
+    description: "採用、評価、育成、配置、定着に関するデータを整理し、意思決定に活かせているか。",
     questions: [
-      "AIに入力してはいけない情報が社内で明確になっている",
-      "AI利用に関する社内ルールやガイドラインがある"
+      "採用、評価、育成、離職などの人事データを整理できている",
+      "人事データをもとに、採用計画や育成施策の改善に活かせている"
     ]
   },
   {
-    id: "risk",
-    name: "AIリスク理解度",
-    description: "ハルシネーション、著作権、情報漏洩、誤情報などのリスクを理解できているか。",
+    id: "privacy",
+    name: "個人情報・AIガバナンス",
+    description: "候補者情報、社員情報、評価情報などをAIで扱う際のルールとリスク管理が整っているか。",
     questions: [
-      "AIの回答が必ず正しいわけではないことを社員が理解している",
-      "著作権、個人情報、情報漏洩などのリスクを理解してAIを使っている"
+      "候補者情報や社員情報をAIに入力する際のルールが明確になっている",
+      "AIの回答をそのまま評価・採用判断に使わない運用ができている"
     ]
   },
   {
-    id: "management",
-    name: "経営推進力",
-    description: "AI推進担当、AI活用目標、経営層の関与、予算などがあるか。",
+    id: "strategy",
+    name: "人事戦略・経営連携",
+    description: "経営方針、人材戦略、現場課題とAI活用をつなげて推進できているか。",
     questions: [
-      "経営層がAI活用の必要性を理解し、推進している",
-      "AI活用を進める担当者や予算、目標がある"
+      "経営方針や事業戦略に合わせた人材課題を整理できている",
+      "人事部門としてAI活用の担当者、目標、推進テーマがある"
     ]
   }
 ];
@@ -84,33 +84,33 @@ const ratingLabels = {
 
 const typeDefinitions = {
   A: {
-    name: "タイプA：AI未着手タイプ",
-    description: "AIへの関心はあるものの、社内理解・活用・ルール整備がまだ進んでいない状態です。まずはAIの基礎理解と安全な使い方を社内で整えることが重要です。",
+    name: "タイプA：人事AI未着手タイプ",
+    description: "人事領域でAI活用を始める余地が大きい状態です。まずは採用、育成、労務問い合わせなど、負担が大きい業務から安全に使える型を作ることが重要です。",
     internalChapter: "Chapter1"
   },
   B: {
-    name: "タイプB：個人任せタイプ",
-    description: "一部の社員はAIを使えている一方で、会社全体の活用ルールや定着の仕組みが整っていない状態です。属人的なAI活用から、組織的なAI活用へ進める必要があります。",
+    name: "タイプB：採用・労務効率化優先タイプ",
+    description: "採用対応や労務問い合わせなど、日常的な人事業務に改善余地がある状態です。求人票、候補者対応、社内FAQなどからAI活用を進めると効果が出やすいです。",
     internalChapter: "Chapter1〜Chapter2"
   },
   C: {
-    name: "タイプC：導入停滞タイプ",
-    description: "AIへの理解や関心はあるものの、実際の業務活用まで落とし込めていない状態です。自社業務に合わせたAI活用設計が必要です。",
+    name: "タイプC：育成・定着強化タイプ",
+    description: "採用後のオンボーディング、社員教育、エンゲージメント施策に伸びしろがある状態です。教育資料作成や社員の声の整理にAIを活用することで、定着力を高められます。",
     internalChapter: "Chapter2"
   },
   D: {
-    name: "タイプD：セキュリティ不安タイプ",
-    description: "AI活用を進める上で、情報漏洩・誤情報・著作権・個人情報管理などのリスク対策が不足している可能性があります。安全にAIを使うためのルール整備が必要です。",
+    name: "タイプD：個人情報・ガバナンス要注意タイプ",
+    description: "候補者情報、社員情報、評価情報をAIで扱う際のルール整備が不足している可能性があります。活用を進める前に、入力禁止情報や確認フローを明確にする必要があります。",
     internalChapter: "Chapter1〜Chapter2"
   },
   E: {
-    name: "タイプE：応用活用準備タイプ",
-    description: "基礎的なAI活用は進んでいますが、RAG、AIエージェント、自社専用AIなどの応用活用にはまだ伸びしろがあります。",
+    name: "タイプE：HRデータ活用準備タイプ",
+    description: "人事業務のAI活用は進み始めていますが、採用、評価、育成、離職などのHRデータを意思決定に活かす余地があります。データ整理と分析テーマの設計が次の課題です。",
     internalChapter: "Chapter3"
   },
   F: {
-    name: "タイプF：AI推進企業タイプ",
-    description: "AI活用の土台が整っており、今後は部門展開、自社専用AI、AIエージェント活用など、より高度な活用へ進める段階です。",
+    name: "タイプF：AI人事推進タイプ",
+    description: "人事部門のAI活用の土台が整っており、今後は採用、育成、配置、定着を横断した高度な人事DXへ進める段階です。",
     internalChapter: "Chapter3"
   }
 };
@@ -242,14 +242,14 @@ function chooseDiagnosisType(totalScore, scores) {
 
   if (totalScore < 30) return typeDefinitions.A;
   if (totalScore >= 80) return typeDefinitions.F;
-  if (totalScore >= 70 && low("advanced", 6)) return typeDefinitions.E;
-  if (high("usage") && (low("education") || low("security"))) return typeDefinitions.B;
-  if (high("understanding") && (low("usage") || low("design"))) return typeDefinitions.C;
-  if (low("security") || low("risk")) return typeDefinitions.D;
+  if (low("privacy") || low("hrdata")) return typeDefinitions.D;
+  if (low("recruiting") || low("operations")) return typeDefinitions.B;
+  if (low("development") || low("retention")) return typeDefinitions.C;
+  if (totalScore >= 70 && (low("hrdata", 6) || low("strategy", 6))) return typeDefinitions.E;
 
   return {
     name: "バランス改善タイプ",
-    description: "AI活用の基礎は見え始めていますが、項目ごとのばらつきがあります。低い項目から順に整備し、ルールづくりや現場での活用設計を進めることが有効です。",
+    description: "人事AI活用の基礎は見え始めていますが、項目ごとのばらつきがあります。低い項目から順に整備し、採用・育成・労務・データ活用をつなげることが有効です。",
     internalChapter: "Chapter1〜Chapter2"
   };
 }
@@ -263,11 +263,14 @@ function buildIssues(scores) {
 }
 
 function calculateImpactEstimate(result) {
-  const securityScore = result.categoryScores.security.score;
-  const riskScore = result.categoryScores.risk.score;
-  const riskAverage = (securityScore + riskScore) / 2;
-  const inefficiencyCost = Math.max(30, Math.round((100 - result.totalScore) * 3.6));
-  const shadowRiskCost = Math.max(10, Math.round((10 - riskAverage) * 6));
+  const privacyScore = result.categoryScores.privacy.score;
+  const hrdataScore = result.categoryScores.hrdata.score;
+  const recruitingScore = result.categoryScores.recruiting.score;
+  const operationsScore = result.categoryScores.operations.score;
+  const riskAverage = (privacyScore + hrdataScore) / 2;
+  const workloadAverage = (recruitingScore + operationsScore) / 2;
+  const inefficiencyCost = Math.max(30, Math.round((10 - workloadAverage) * 18));
+  const shadowRiskCost = Math.max(10, Math.round((10 - riskAverage) * 7));
 
   return {
     inefficiencyCost,
